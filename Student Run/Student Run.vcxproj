@@ -147,6 +147,13 @@
   <ItemGroup>
     <ClCompile Include="startgame.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="colors.h" />
+    <ClInclude Include="metro.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="metrics.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

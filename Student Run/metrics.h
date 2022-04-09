@@ -9,6 +9,9 @@
 #include "utils.h"
 #include "colors.h"
 
+void startClock() {
+	startTime = clock();
+}
 
 void displayScore() {
 	std::string textToDisplay = "Score: ";
