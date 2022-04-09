@@ -1,21 +1,13 @@
 #pragma once
 
-#include <GL/freeglut.h>
+// libraries
 #include <math.h>
 
-#define PI 3.14
+// headers
+#include "globals.h"
+#include "colors.h"
 
-struct Color {
-	GLfloat red;
-	GLfloat green;
-	GLfloat blue;
-
-	Color(GLfloat red, GLfloat green, GLfloat blue) {
-		this->red = red;
-		this->green = green;
-		this->blue = blue;
-	}
-};
+#define PI 3.14f
 
 void renderString(float x, float y, void* font, const unsigned char* string, Color color)
 {
@@ -56,6 +48,8 @@ void drawHollowCircle(GLfloat x, GLfloat y, GLfloat radius, Color color) {
 }
 
 void drawRectangle(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, Color color) {
+	glColor3f(color.red, color.green, color.blue);
+
 	glBegin(GL_QUADS);
 
 	glVertex2f(x1, y1);
@@ -67,6 +61,8 @@ void drawRectangle(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, Color color) 
 }
 
 void drawHollowRectangle(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, Color color) {
+	glColor3f(color.red, color.green, color.blue);
+
 	glBegin(GL_LINE_LOOP);
 
 	glVertex2f(x1, y1);
@@ -78,6 +74,8 @@ void drawHollowRectangle(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, Color c
 }
 
 void drawTriangle(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, GLfloat x3, GLfloat y3, Color color) {
+	glColor3f(color.red, color.green, color.blue);
+
 	glBegin(GL_TRIANGLES);
 
 	glVertex2f(x1, y1);
@@ -88,11 +86,25 @@ void drawTriangle(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, GLfloat x3, GL
 }
 
 void drawHollowTriangle(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, GLfloat x3, GLfloat y3, Color color) {
+	glColor3f(color.red, color.green, color.blue);
+
 	glBegin(GL_LINE_LOOP);
 
 	glVertex2f(x1, y1);
 	glVertex2f(x2, y2);
 	glVertex2f(x3, y3);
+
+	glEnd();
+}
+
+void drawLine(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, Color color, GLfloat lineWidth) {
+	glColor3f(color.red, color.green, color.blue);
+	glLineWidth(lineWidth);
+
+	glBegin(GL_LINES);
+
+	glVertex2f(x1, y1);
+	glVertex2f(x2, y2);
 
 	glEnd();
 }
