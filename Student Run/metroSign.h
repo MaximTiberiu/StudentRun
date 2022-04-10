@@ -3,14 +3,14 @@
 #include "colors.h"
 #include "utils.h"
 
+Color white(1.0f, 1.0f, 1.0f);
+Color blue(0.0f, 0.0f, 1.0f);
+
+
 void metroSign(void) {
 	//metrou box
 	drawRectangle(10, 50, 40, 80, white);
 
 	//"M" letter
-	glColor3f(0.0, 0.0, 1.0); //blue
-	glRasterPos2i(13, 55);
-	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'M');
-
-	glFlush();
+	renderString(13, 55, GLUT_BITMAP_TIMES_ROMAN_24, blue);
 }
