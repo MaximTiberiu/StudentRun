@@ -47,5 +47,11 @@
     <ClInclude Include="obstacles.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="bottles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="metroSign.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

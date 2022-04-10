@@ -1,7 +1,4 @@
 #pragma once
-#include "utils.h"
-#include "colors.h"
-
 
 void drawCaBottle() {
 	drawRectangle(0.0f,0.0f,20.0f,20.0f,bottleColorCalcium);

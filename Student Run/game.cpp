@@ -8,6 +8,8 @@
 #include "appsettings.h"
 #include "controllers.h"
 #include "obstacles.h"
+#include "bottles.h"
+#include "metroSign.h"
 
 
 void startgame(void)
@@ -53,6 +55,7 @@ void FundalMetrou(void)
 	metroBackground();
 	drawStudent();
 	drawObstacle();
+	drawMetroSign();
 
 	if (contor == 1 && (j != 160 && j != 320))
 		j = j + 1;
