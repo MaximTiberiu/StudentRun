@@ -149,16 +149,27 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="appsettings.h" />
+    <ClInclude Include="appsettings.hpp" />
     <ClInclude Include="bottles.h" />
+    <ClInclude Include="bottles.hpp" />
     <ClInclude Include="colors.h" />
+    <ClInclude Include="colors.hpp" />
     <ClInclude Include="controllers.h" />
+    <ClInclude Include="controllers.hpp" />
+    <ClInclude Include="globals.hpp" />
+    <ClInclude Include="metrics.hpp" />
     <ClInclude Include="metro.h" />
     <ClInclude Include="globals.h" />
     <ClInclude Include="metrics.h" />
+    <ClInclude Include="metro.hpp" />
     <ClInclude Include="metroSign.h" />
+    <ClInclude Include="metroSign.hpp" />
     <ClInclude Include="obstacles.h" />
+    <ClInclude Include="obstacles.hpp" />
     <ClInclude Include="student.h" />
+    <ClInclude Include="student.hpp" />
     <ClInclude Include="utils.h" />
+    <ClInclude Include="utils.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

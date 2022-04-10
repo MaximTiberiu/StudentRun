@@ -3,13 +3,13 @@
 #include<windows.h>
 
 // headers
-#include "metro.h"
-#include "student.h"
-#include "appsettings.h"
-#include "controllers.h"
-#include "obstacles.h"
-#include "bottles.h"
-#include "metroSign.h"
+#include "metro.hpp"
+#include "student.hpp"
+#include "appsettings.hpp"
+#include "controllers.hpp"
+#include "obstacles.hpp"
+#include "bottles.hpp"
+#include "metroSign.hpp"
 
 
 void startgame(void)

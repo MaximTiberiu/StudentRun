@@ -4,8 +4,8 @@
 #include <math.h>
 
 // headers
-#include "globals.h"
-#include "colors.h"
+#include "globals.hpp"
+#include "colors.hpp"
 
 #define PI 3.14f
 

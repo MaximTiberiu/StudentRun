@@ -1,7 +1,7 @@
 // headers
-#include "globals.h"
-#include "colors.h"
-#include "utils.h"
+#include "globals.hpp"
+#include "colors.hpp"
+#include "utils.hpp"
 
 void metroBackground(void)
 {
