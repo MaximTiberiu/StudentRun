@@ -17,6 +17,10 @@ struct Color {
 // basic colors
 Color white(1.0f, 1.0f, 1.0f);
 Color black(0.0f, 0.0f, 0.0f);
+Color green(0.0f, 1.0f, 0.0f);
+
+// app color
+Color mainBackgroundColor(0.98f, 0.929f, 0.792f);
 
 // metro background colors
 Color metroFloorColor(0.22f, 0.28f, 0.44f);

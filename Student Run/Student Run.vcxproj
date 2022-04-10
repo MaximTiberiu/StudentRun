@@ -145,13 +145,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="startgame.cpp" />
+    <ClCompile Include="game.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="appsettings.h" />
     <ClInclude Include="colors.h" />
+    <ClInclude Include="controllers.h" />
     <ClInclude Include="metro.h" />
     <ClInclude Include="globals.h" />
     <ClInclude Include="metrics.h" />
+    <ClInclude Include="obstacles.h" />
+    <ClInclude Include="student.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
