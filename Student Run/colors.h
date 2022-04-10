@@ -37,3 +37,10 @@ Color metroSeatShadeColor(0.58f, 0.66f, 0.76f);
 Color metroHandleColor(0.56f, 0.26f, 0.23f);
 Color metroBarColor(0.69f, 0.81f, 0.82f);
 Color metroCarMargin(0.40f, 0.40f, 0.41f);
+
+//bottles colors
+Color bottleColorCalcium(0.9f, 0.9f, 0.9f);
+Color labelWritingCalcium(0.0f, 1.0f, 1.0f);
+Color bottleColorMagnesium(0.65f,0.117f,0.376f);
+Color labelWritingMagnesium(0.423f,0.176f,0.478f);
+Color bottleColorVitC(1.0f,0.925f,0.25f);
