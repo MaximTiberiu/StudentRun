@@ -5,9 +5,9 @@
 #include <string>
 
 // headers
-#include "globals.h"
-#include "utils.h"
-#include "colors.h"
+#include "globals.hpp"
+#include "utils.hpp"
+#include "colors.hpp"
 
 void startClock() {
 	startTime = clock();
