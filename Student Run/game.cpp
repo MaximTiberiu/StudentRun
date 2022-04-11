@@ -3,13 +3,14 @@
 #include<windows.h>
 
 // headers
-#include "metro.hpp"
+#include "mainbackground.hpp"
+#include "metrobackground.hpp"
 #include "student.hpp"
 #include "appsettings.hpp"
 #include "controllers.hpp"
 #include "obstacles.hpp"
 #include "bottles.hpp"
-#include "metroSign.hpp"
+#include "metrosign.hpp"
 
 
 void startgame(void)
@@ -56,6 +57,7 @@ void FundalMetrou(void)
 	drawStudent();
 	drawObstacle();
 	drawMetroSign();
+	drawMgBottle();
 
 	if (contor == 1 && (j != 160 && j != 320))
 		j = j + 1;

@@ -1,26 +1,6 @@
-#include <iostream>
-#include<windows.h>
-#include <GL/freeglut.h>
-
-
-using namespace std;
-
-GLdouble left_m = -100.0;
-GLdouble right_m = 700.0;
-GLdouble bottom_m = -140.0;
-GLdouble top_m = 460.0;
-
-double ok = 1;
-double j = 0.0;
-double i = 0.0;
-
-double contor = 0;
-double loc_vert = 800;
-int vector[3] = { 0, 160, 320 };
-double height = vector[rand() % 3];
-int score = 0;
-double timp = 0.15;
-int pct = 1000;
+#include "globals.hpp"
+#include "colors.hpp"
+#include "utils.hpp"
 
 void FundalPrincipal(void) 
 {
