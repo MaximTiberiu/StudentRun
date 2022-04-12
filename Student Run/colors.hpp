@@ -15,11 +15,12 @@ struct Color {
 };
 
 // basic colors
-Color white(1.0f, 1.0f, 1.0f);
-Color red(1.0f, 0.0f, 0.0f);
-Color black(0.0f, 0.0f, 0.0f);
-Color green(0.0f, 1.0f, 0.0f);
-Color blue(0.0f, 0.0f, 1.0f);
+Color whiteColor(1.00f, 1.00f, 1.00f);
+Color redColor(1.00f, 0.00f, 0.00f);
+Color blackColor(0.00f, 0.00f, 0.00f);
+Color greenColor(0.00f, 1.00f, 0.00f);
+Color blueColor(0.00f, 0.00f, 1.00f);
+Color yellowColor(1.00f, 1.00f, 0.00f);
 
 // app color
 Color mainBackgroundColor(0.98f, 0.929f, 0.792f);
@@ -38,11 +39,17 @@ Color metroSeatColor(0.42f, 0.53f, 0.65f);
 Color metroSeatShadeColor(0.58f, 0.66f, 0.76f);
 Color metroHandleColor(0.56f, 0.26f, 0.23f);
 Color metroBarColor(0.69f, 0.81f, 0.82f);
-Color metroCarMargin(0.40f, 0.40f, 0.41f);
+Color metroCarMarginColor(0.40f, 0.40f, 0.41f);
 
-//bottles colors
-Color bottleColorCalcium(0.9f, 0.9f, 0.9f);
-Color labelWritingCalcium(0.0f, 1.0f, 1.0f);
-Color bottleColorMagnesium(0.65f,0.117f,0.376f);
-Color labelWritingMagnesium(0.423f,0.176f,0.478f);
-Color bottleColorVitC(1.0f,0.925f,0.25f);
+// bottles colors
+Color bottleCalciumColor(0.90f, 0.90f, 0.90f);
+Color labelWritingCalciumColor(0.00f, 1.00f, 1.00f);
+Color bottleMagnesiumColor(0.65f, 0.12f, 0.38f);
+Color labelWritingMagnesiumColor(0.42f, 0.18f, 0.48f);
+Color bottleVitCColor(1.00f, 0.93f, 0.25f);
+
+// main baclground colors
+Color crosswalkGrayColor(0.50f, 0.50f, 0.50f);
+Color skyColor(0.60f, 0.90f, 1.00f);
+Color benchDarkColor(0.60f, 0.30f, 0.30f);
+Color benchLightColor(0.70f, 0.30f, 0.30f);

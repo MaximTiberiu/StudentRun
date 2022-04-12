@@ -21,7 +21,7 @@ void displayScore() {
 	std::copy(textToDisplay.begin(), textToDisplay.end(), scoreText);
 	scoreText[textToDisplay.length()] = 0;
 
-	renderString(-75.0f, 425.0f, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)scoreText, black);
+	renderString(-75.0f, 425.0f, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)scoreText, blackColor);
 }
 
 void displayTime() {
@@ -35,6 +35,6 @@ void displayTime() {
 	std::copy(textToDisplay.begin(), textToDisplay.end(), timeText);
 	timeText[textToDisplay.length()] = 0;
 
-	renderString(450.0f, 425.0f, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)timeText, black);
+	renderString(450.0f, 425.0f, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)timeText, blackColor);
 
 }
