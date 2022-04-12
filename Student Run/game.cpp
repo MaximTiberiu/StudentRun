@@ -11,6 +11,7 @@
 #include "obstacles.hpp"
 #include "bottles.hpp"
 #include "metrosign.hpp"
+#include "startscreen.hpp"
 
 
 void startgame(void)
@@ -47,19 +48,29 @@ void FundalMetrou(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	FundalPrincipal();
-	//metroBackground();
-	drawStudent();
-	drawObstacle();
-	drawMetroSign();
-	drawMgBottle();
+	if (gameState == 0)
+	{
+		startScreen();
+		selectedOptionController();
+		drawSelectedOption();
+	}
+	//FundalPrincipal();
+	
+	if (gameState == 1)
+	{
+		metroBackground();
+		drawStudent();
+		drawObstacle();
+		drawMetroSign();
+		drawMgBottle();
 
-	studentController();
+		studentController();
 
-	startgame();
+		startgame();
 
-	displayScore();
-	displayTime();
+		displayScore();
+		displayTime();
+	}
 
 	glutPostRedisplay();
 	glutSwapBuffers();

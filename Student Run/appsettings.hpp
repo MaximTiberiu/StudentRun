@@ -8,7 +8,8 @@ void appInitialization()
 	glClearColor(mainBackgroundColor.red, mainBackgroundColor.green, mainBackgroundColor.blue, 0.0f);
 	glMatrixMode(GL_PROJECTION);
 	glOrtho(leftMArgin, rightMargin, bottomMargin, topMargin, -1.0, 1.0);
-	startClock();
+	gameState = 0;
+	// startClock();
 }
 
 void reshapeWindow(GLsizei width, GLsizei height)

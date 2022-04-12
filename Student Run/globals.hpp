@@ -18,6 +18,7 @@ bool isGameOver = false;
 int verticalPositions[3] = { 0, 160, 320 };
 int scoreStep = 1000;
 double constSpeed = 0.15;
+int gameState; // 0 - start screen; 1 - game; 2 - finish screen
 
 // student global vars
 int studentVerticalPosition = 0;
@@ -27,3 +28,7 @@ int studentPath = 0;
 // obstacle global vars
 double obstacleHorizontalPosition = 800;
 double obstacleVerticalPositon = 160;
+
+// start screen vars
+int selectedOptionVerticalPosition = 200;
+int selectedOptionPath = 0;
