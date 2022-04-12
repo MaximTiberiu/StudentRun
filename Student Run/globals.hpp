@@ -11,6 +11,7 @@ GLdouble topMargin = 460.0;
 // metrics
 int score;
 clock_t startTime;
+int totalTime;
 
 // game global vars
 bool isGameOver = false;
