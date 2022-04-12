@@ -26,10 +26,13 @@ void displayScore() {
 
 void displayTime() {
 
-	int time = (int)(clock() - startTime) / CLOCKS_PER_SEC;
+	if (!isGameOver)
+	{
+		totalTime = (int)(clock() - startTime) / CLOCKS_PER_SEC;
+	}
 
 	std::string textToDisplay = "Time: ";
-	textToDisplay = textToDisplay + std::to_string(time) + " sec";
+	textToDisplay = textToDisplay + std::to_string(totalTime) + " sec";
 
 	unsigned char timeText[256];
 	std::copy(textToDisplay.begin(), textToDisplay.end(), timeText);
