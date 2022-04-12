@@ -108,3 +108,16 @@ void drawLine(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, Color color, GLflo
 
 	glEnd();
 }
+
+void drawParallelogram(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, GLfloat x3, GLfloat y3, GLfloat x4, GLfloat y4, Color color) {
+	glColor3f(color.red, color.green, color.blue);
+
+	glBegin(GL_POLYGON);
+
+	glVertex2f(x1, y1);
+	glVertex2f(x2, y2);
+	glVertex2f(x3, y3);
+	glVertex2f(x4, y4);
+
+	glEnd();
+}

@@ -53,7 +53,8 @@ void FundalMetrou(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	metroBackground();
+	FundalPrincipal();
+	//metroBackground();
 	drawStudent();
 	drawObstacle();
 	drawMetroSign();

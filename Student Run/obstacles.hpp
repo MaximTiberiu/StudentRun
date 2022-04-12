@@ -5,6 +5,6 @@ void drawObstacle()
 {
 	glPushMatrix();
 	glTranslated(loc_vert, height, 0.0);
-	drawRectangle(-45, -15, 45, 15, white);
+	drawRectangle(-45, -15, 45, 15, whiteColor);
 	glPopMatrix();
 }

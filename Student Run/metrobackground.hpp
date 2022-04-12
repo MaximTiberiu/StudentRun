@@ -29,10 +29,10 @@ void metroBackground(void)
 	drawRectangle(400, -50, 675, -10, bottomMetroDoorColor);
 
 	// metro door margins
-	drawLine(400, -50, 400, 300, black, 2);
-	drawLine(675, -50, 675, 300, black, 2);
-	drawLine(400, 300, 675, 300, black, 2);
-	drawLine(539, -50, 539, 300, black, 2);
+	drawLine(400, -50, 400, 300, blackColor, 2);
+	drawLine(675, -50, 675, 300, blackColor, 2);
+	drawLine(400, 300, 675, 300, blackColor, 2);
+	drawLine(539, -50, 539, 300, blackColor, 2);
 
 
 	// metro door windows
@@ -49,20 +49,20 @@ void metroBackground(void)
 	drawRectangle(-20, 20, 330, 90, metroBackrestShadeColor);
 
 	// backrest margins
-	drawLine(-40, 100, 350, 100, black, 2);
-	drawLine(-40, 100, -40, 0, black, 2);
-	drawLine(-40, 0, 350, 0, black, 2);
-	drawLine(350, 0, 350, 100, black, 2);
+	drawLine(-40, 100, 350, 100, blackColor, 2);
+	drawLine(-40, 100, -40, 0, blackColor, 2);
+	drawLine(-40, 0, 350, 0, blackColor, 2);
+	drawLine(350, 0, 350, 100, blackColor, 2);
 
 
 	// seat
 	drawRectangle(-45, -40, 355, 10, metroSeatColor);
 
 	// seat margins
-	drawLine(-45, 10, 355, 10, black, 2);
-	drawLine(-45, 10, -45, -40, black, 2);
-	drawLine(-45, -40, 355, -40, black, 2);
-	drawLine(355, -40, 355, 10, black, 2);
+	drawLine(-45, 10, 355, 10, blackColor, 2);
+	drawLine(-45, 10, -45, -40, blackColor, 2);
+	drawLine(-45, -40, 355, -40, blackColor, 2);
+	drawLine(355, -40, 355, 10, blackColor, 2);
 
 	// seat shade
 	drawRectangle(-25, -30, 335, 0, metroSeatShadeColor);
@@ -76,7 +76,7 @@ void metroBackground(void)
 	drawRectangle(370, -50, 385, 350, metroBarColor);
 
 	// metro car margins
-	drawLine(-100, -50, 1500, -50, metroCarMargin, 10);
-	drawLine(-100, 350, 1500, 350, metroCarMargin, 3);
-	drawLine(-100, 400, 1500, 400, metroCarMargin, 3);
+	drawLine(-100, -50, 1500, -50, metroCarMarginColor, 10);
+	drawLine(-100, 350, 1500, 350, metroCarMarginColor, 3);
+	drawLine(-100, 400, 1500, 400, metroCarMarginColor, 3);
 }
