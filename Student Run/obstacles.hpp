@@ -4,7 +4,12 @@
 void drawObstacle()
 {
 	glPushMatrix();
-	glTranslated(loc_vert, height, 0.0);
+	glTranslated(obstacleHorizontalPosition, obstacleVerticalPositon, 0.0);
 	drawRectangle(-45, -15, 45, 15, whiteColor);
 	glPopMatrix();
+}
+
+void generateNewObstacleVerticalPosition() 
+{
+	obstacleVerticalPositon = verticalPositions[rand() % 3];
 }

@@ -2,12 +2,12 @@
 
 void moveUp()
 {
-	if (ok != 0)
+	if (!isGameOver)
 	{
-		if (j < 320)
+		if (studentVerticalPosition < 320)
 		{
-			contor = 1;
-			j += 1;
+			studentPath = 1;
+			studentVerticalPosition += 1;
 		}
 
 		glutPostRedisplay();
@@ -16,14 +16,12 @@ void moveUp()
 
 void moveDown()
 {
-	if (ok != 0)
+	if (!isGameOver)
 	{
-		if (j > 0)
+		if (studentVerticalPosition > 0)
 		{
-			contor = -1;
-			j -= 1;
-
-
+			studentPath = -1;
+			studentVerticalPosition -= 1;
 		}
 
 		glutPostRedisplay();

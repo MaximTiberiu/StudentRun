@@ -12,14 +12,17 @@ GLdouble topMargin = 460.0;
 int score;
 clock_t startTime;
 
+// game global vars
+bool isGameOver = false;
+int verticalPositions[3] = { 0, 160, 320 };
+int scoreStep = 1000;
+double constSpeed = 0.15;
 
-double ok = 1;
-double j = 0.0;
-double i = 0.0;
+// student global vars
+int studentVerticalPosition = 0;
+int studentPath = 0;
 
-double contor = 0;
-double loc_vert = 800;
-int vector[3] = { 0, 160, 320 };
-double height = vector[rand() % 3];
-double timp = 0.15;
-int pct = 1000;
+
+// obstacle global vars
+double obstacleHorizontalPosition = 800;
+double obstacleVerticalPositon = 160;

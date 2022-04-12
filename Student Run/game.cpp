@@ -16,35 +16,29 @@
 void startgame(void)
 {
 
-	if (height != j || (loc_vert > 90 || loc_vert < -90))
+	if (obstacleVerticalPositon != studentVerticalPosition || (obstacleHorizontalPosition > 90 || obstacleHorizontalPosition < -90))
 	{
 
-		if (i < -380)
-		{
-			i = 0;
-		}
-		i = i - 2 * timp;
+		obstacleHorizontalPosition -= constSpeed;
 
-		loc_vert -= timp;
-
-		if (loc_vert < -150)
+		if (obstacleHorizontalPosition < -150)
 		{
 			score += 100;
-			height = vector[rand() % 3];
+			generateNewObstacleVerticalPosition();
 			std::cout << "Score:  " << score << "\n";
-			loc_vert = 800;
+			obstacleHorizontalPosition = 800;
 		}
 
-		if (score >= pct && pct <= 15000)
+		if (score >= scoreStep && scoreStep <= 15000)
 		{
-			timp += 0.1;
-			pct += 1000;
+			constSpeed += 0.1;
+			scoreStep += 1000;
 		}
 
 		glutPostRedisplay();
 	}
 	else {
-		ok = 0;
+		isGameOver = true;
 	}
 }
 
@@ -60,14 +54,7 @@ void FundalMetrou(void)
 	drawMetroSign();
 	drawMgBottle();
 
-	if (contor == 1 && (j != 160 && j != 320))
-		j = j + 1;
-	else if (contor == -1 && (j != 160 && j != 0))
-		j = j - 1;
-	else {
-		contor = 0;
-
-	}
+	studentController();
 
 	startgame();
 
