@@ -43,7 +43,7 @@ void startScreenMoveDown() {
 	glutPostRedisplay();
 }
 
-void selectOption() {
+void startScreenSelectOption() {
 	if (selectedOptionVerticalPosition == 200) {
 		gameState = 1;
 		startClock();
@@ -54,22 +54,42 @@ void selectOption() {
 	}
 }
 
+// finish screen
+void finishScreenMoveUp() {
+	if (selectedOptionVerticalPosition < 200) {
+		selectedOptionPath = 1;
+		selectedOptionVerticalPosition++;
+	}
 
-// keyboard controllers
-void startScreenKeyboardController(int key, int x, int y) {
-	switch (key) {
-		case GLUT_KEY_UP:
-			startScreenMoveUp();
-			break;
-		case GLUT_KEY_DOWN:
-			startScreenMoveDown();
-			break;
-		case GLUT_KEY_RIGHT:
-			selectOption();
-			break;
+	glutPostRedisplay();
+}
+
+void finishScreenMoveDown() {
+	if (selectedOptionVerticalPosition > 120) {
+		selectedOptionPath = -1;
+		selectedOptionVerticalPosition--;
+	}
+
+	glutPostRedisplay();
+}
+
+void finishScreenSelectOption() {
+	if (selectedOptionVerticalPosition == 200) {
+		resetGlobalVars();
+		gameState = 1;
+		startClock();
+	}
+	else if (selectedOptionVerticalPosition == 160) {
+		resetGlobalVars();
+		gameState = 0;
+	}
+	else {
+		exit(0);
 	}
 }
 
+
+// keyboard controllers
 void studentKeyboardController(int key, int x, int y) {
 	switch (key) {
 		case GLUT_KEY_UP:
@@ -78,5 +98,33 @@ void studentKeyboardController(int key, int x, int y) {
 		case GLUT_KEY_DOWN:
 			studentMoveDown();
 			break;
+	}
+}
+
+void startScreenKeyboardController(int key, int x, int y) {
+	switch (key) {
+	case GLUT_KEY_UP:
+		startScreenMoveUp();
+		break;
+	case GLUT_KEY_DOWN:
+		startScreenMoveDown();
+		break;
+	case GLUT_KEY_RIGHT:
+		startScreenSelectOption();
+		break;
+	}
+}
+
+void finishScreenKeyboardController(int key, int x, int y) {
+	switch (key) {
+	case GLUT_KEY_UP:
+		finishScreenMoveUp();
+		break;
+	case GLUT_KEY_DOWN:
+		finishScreenMoveDown();
+		break;
+	case GLUT_KEY_RIGHT:
+		finishScreenSelectOption();
+		break;
 	}
 }

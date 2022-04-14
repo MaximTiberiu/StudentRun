@@ -59,5 +59,8 @@
     <ClInclude Include="startscreen.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="finishscreen.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
