@@ -1,5 +1,6 @@
 #pragma once
 
+// libraries
 #include <GL/freeglut.h>
 
 struct Color {

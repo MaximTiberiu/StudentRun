@@ -1,5 +1,8 @@
 #pragma once
 
+// headers - basics 
+#include "utils.hpp"
+
 void drawCaBottle() {
 	drawRectangle(0.0f,0.0f,20.0f,20.0f,bottleCalciumColor);
 	drawRectangle(0.0f, 20.0f, 20.0f, 30.0f, whiteColor);

@@ -1,7 +1,6 @@
 #pragma once
 
-#include "globals.hpp"
-#include "colors.hpp"
+// headers - basics 
 #include "utils.hpp"
 
 
@@ -13,21 +12,16 @@ void finishScreenDrawSelectedOption() {
 }
 
 void finishScreenSelectedOptionController() {
-	if (selectedOptionPath == 1 && (selectedOptionVerticalPosition != 160 && selectedOptionVerticalPosition != 200))
-	{
+	if (selectedOptionPath == 1 && (selectedOptionVerticalPosition != 160 && selectedOptionVerticalPosition != 200)) {
 		selectedOptionVerticalPosition++;
-	}
-	else if (selectedOptionPath == -1 && (selectedOptionVerticalPosition != 160 && selectedOptionVerticalPosition != 120))
-	{
+	} else if (selectedOptionPath == -1 && (selectedOptionVerticalPosition != 160 && selectedOptionVerticalPosition != 120)) {
 		selectedOptionVerticalPosition--;
-	}
-	else {
+	} else {
 		selectedOptionPath = 0;
 	}
 }
 
-void finishScreen()
-{
+void finishScreen() {
 	renderString(250, 200, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"RESTART GAME", blackColor);
 	renderString(255, 160, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"MAIN MENU", blackColor);
 	renderString(255, 120, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"QUIT GAME", blackColor);

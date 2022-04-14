@@ -1,10 +1,18 @@
-// headers
-#include "globals.hpp"
-#include "colors.hpp"
+#pragma once
+
+// headers - basics 
 #include "utils.hpp"
 
-void metroBackground(void)
-{
+// headers - elements
+#include "student.hpp"
+#include "metroSign.hpp"
+#include "bottles.hpp"
+#include "obstacles.hpp"
+
+// headers - metrics
+#include "metrics.hpp"
+
+void metroBackground(void) {
 	// floor 
 	drawRectangle(-100, -140, 700, -50, metroFloorColor);
 

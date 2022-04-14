@@ -1,5 +1,8 @@
 #pragma once
 
+// headers - basics 
+#include "utils.hpp"
+
 
 // student
 void studentMoveUp() {
@@ -78,12 +81,10 @@ void finishScreenSelectOption() {
 		resetGlobalVars();
 		gameState = 1;
 		startClock();
-	}
-	else if (selectedOptionVerticalPosition == 160) {
+	} else if (selectedOptionVerticalPosition == 160) {
 		resetGlobalVars();
 		gameState = 0;
-	}
-	else {
+	} else {
 		exit(0);
 	}
 }
@@ -103,28 +104,28 @@ void studentKeyboardController(int key, int x, int y) {
 
 void startScreenKeyboardController(int key, int x, int y) {
 	switch (key) {
-	case GLUT_KEY_UP:
-		startScreenMoveUp();
-		break;
-	case GLUT_KEY_DOWN:
-		startScreenMoveDown();
-		break;
-	case GLUT_KEY_RIGHT:
-		startScreenSelectOption();
-		break;
+		case GLUT_KEY_UP:
+			startScreenMoveUp();
+			break;
+		case GLUT_KEY_DOWN:
+			startScreenMoveDown();
+			break;
+		case GLUT_KEY_RIGHT:
+			startScreenSelectOption();
+			break;
 	}
 }
 
 void finishScreenKeyboardController(int key, int x, int y) {
 	switch (key) {
-	case GLUT_KEY_UP:
-		finishScreenMoveUp();
-		break;
-	case GLUT_KEY_DOWN:
-		finishScreenMoveDown();
-		break;
-	case GLUT_KEY_RIGHT:
-		finishScreenSelectOption();
-		break;
+		case GLUT_KEY_UP:
+			finishScreenMoveUp();
+			break;
+		case GLUT_KEY_DOWN:
+			finishScreenMoveDown();
+			break;
+		case GLUT_KEY_RIGHT:
+			finishScreenSelectOption();
+			break;
 	}
 }

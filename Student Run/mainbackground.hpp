@@ -1,14 +1,18 @@
-#include "globals.hpp"
-#include "colors.hpp"
+#pragma once
+
+// headers - basics 
 #include "utils.hpp"
+
+// headers - elements
 #include "student.hpp"
 #include "metroSign.hpp"
 #include "bottles.hpp"
-#include "metrics.hpp"
 #include "obstacles.hpp"
 
-void mainBackground(void) 
-{
+// headers - metrics
+#include "metrics.hpp"
+
+void mainBackground(void) {
 	// crosswalk - gray
 	drawRectangle(-100, -140, 700, 0, crosswalkGrayColor);
 
@@ -69,31 +73,25 @@ void mainBackground(void)
 	drawRectangle(635, 190, 655, 210, greenColor);
 }
 
-void startgame(void)
-{
-
-	if (obstacleVerticalPositon != studentVerticalPosition || (obstacleHorizontalPosition > 90 || obstacleHorizontalPosition < -90))
-	{
+void startgame(void) {
+	if (obstacleVerticalPositon != studentVerticalPosition || (obstacleHorizontalPosition > 90 || obstacleHorizontalPosition < -90)) {
 
 		obstacleHorizontalPosition -= constSpeed;
 
-		if (obstacleHorizontalPosition < -150)
-		{
+		if (obstacleHorizontalPosition < -150) {
 			score += 100;
 			generateNewObstacleVerticalPosition();
 			std::cout << "Score:  " << score << "\n";
 			obstacleHorizontalPosition = 800;
 		}
 
-		if (score >= scoreStep && scoreStep <= 15000)
-		{
+		if (score >= scoreStep && scoreStep <= 15000) {
 			constSpeed += 0.1;
 			scoreStep += 1000;
 		}
 
 		glutPostRedisplay();
-	}
-	else {
+	} else {
 		isGameOver = true;
 		gameState = 3;
 	}
