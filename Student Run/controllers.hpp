@@ -43,7 +43,19 @@ void startScreenMoveDown() {
 	glutPostRedisplay();
 }
 
+void selectOption() {
+	if (selectedOptionVerticalPosition == 200) {
+		gameState = 1;
+		startClock();
+	} else if (selectedOptionVerticalPosition == 160) {
+		// TODO: Load Game
+	} else {
+		exit(0);
+	}
+}
 
+
+// keyboard controllers
 void startScreenKeyboardController(int key, int x, int y) {
 	switch (key) {
 		case GLUT_KEY_UP:
@@ -53,8 +65,7 @@ void startScreenKeyboardController(int key, int x, int y) {
 			startScreenMoveDown();
 			break;
 		case GLUT_KEY_RIGHT:
-			gameState = 1;
-			startClock();
+			selectOption();
 			break;
 	}
 }

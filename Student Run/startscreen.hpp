@@ -31,8 +31,8 @@ void startScreen()
 	renderString(250, 200, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"START GAME", blackColor);
 	renderString(255, 160, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"LOAD GAME", blackColor);
 	renderString(255, 120, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"QUIT GAME", blackColor);
-	renderString(150, -90, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"Press UP/DOWN to choose the option.", blackColor);
-	renderString(150, -130, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"Press RIGHT to select the option.", blackColor);
+	renderString(70, -90, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"Use Arrow keys to move up/down to choose an option.", blackColor);
+	renderString(100, -130, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"Press right arrow key to select the option.", blackColor);
 }
 
 void startScreenDisplayFunction() {
