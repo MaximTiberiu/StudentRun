@@ -158,6 +158,7 @@
     <ClInclude Include="metrobackground.hpp" />
     <ClInclude Include="metroSign.hpp" />
     <ClInclude Include="obstacles.hpp" />
+    <ClInclude Include="startscreen.hpp" />
     <ClInclude Include="student.hpp" />
     <ClInclude Include="utils.hpp" />
   </ItemGroup>

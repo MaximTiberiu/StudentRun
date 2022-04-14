@@ -101,6 +101,7 @@ void drawLine(GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, Color color, GLflo
 	glColor3f(color.red, color.green, color.blue);
 	glLineWidth(lineWidth);
 
+
 	glBegin(GL_LINES);
 
 	glVertex2f(x1, y1);

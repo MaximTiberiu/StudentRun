@@ -56,5 +56,8 @@
     <ClInclude Include="metrobackground.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="startscreen.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
