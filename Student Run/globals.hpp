@@ -1,4 +1,6 @@
 #pragma once
+
+// libraries
 #include <GL/freeglut.h>
 #include <time.h>
 

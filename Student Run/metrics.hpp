@@ -4,10 +4,8 @@
 #include <iostream>
 #include <string>
 
-// headers
-#include "globals.hpp"
+// headers - basics 
 #include "utils.hpp"
-#include "colors.hpp"
 
 void startClock() {
 	startTime = clock();
@@ -26,8 +24,7 @@ void displayScore() {
 
 void displayTime() {
 
-	if (!isGameOver)
-	{
+	if (!isGameOver) {
 		totalTime = (int)(clock() - startTime) / CLOCKS_PER_SEC;
 	}
 
@@ -39,5 +36,4 @@ void displayTime() {
 	timeText[textToDisplay.length()] = 0;
 
 	renderString(450.0f, 425.0f, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)timeText, blackColor);
-
 }

@@ -3,14 +3,13 @@
 // libraries
 #include <math.h>
 
-// headers
+// headers - basics
 #include "globals.hpp"
 #include "colors.hpp"
 
 #define PI 3.14f
 
-void renderString(float x, float y, void* font, const unsigned char* string, Color color)
-{
+void renderString(float x, float y, void* font, const unsigned char* string, Color color) {
 	glColor3f(color.red, color.green, color.blue);
 	glRasterPos2f(x, y);
 	glutBitmapString(font, string);

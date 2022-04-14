@@ -2,32 +2,26 @@
 
 // libraries
 #include <iostream>
-#include<windows.h>
+#include <windows.h>
 
-// headers
+// headers - backgrounds
+#include "startscreen.hpp"
 #include "mainbackground.hpp"
 #include "metrobackground.hpp"
-#include "student.hpp"
-#include "appsettings.hpp"
-#include "controllers.hpp"
-#include "obstacles.hpp"
-#include "bottles.hpp"
-// #include "metrosign.hpp"
-#include "startscreen.hpp"
-#include "metrics.hpp"
 #include "finishscreen.hpp"
 
-void appInitialization()
-{
+// headers - controllers
+#include "controllers.hpp"
+
+
+void appInitialization() {
 	glClearColor(mainBackgroundColor.red, mainBackgroundColor.green, mainBackgroundColor.blue, 0.0f);
 	glMatrixMode(GL_PROJECTION);
 	glOrtho(leftMArgin, rightMargin, bottomMargin, topMargin, -1.0, 1.0);
 	gameState = 0;
-	// startClock();
 }
 
-void reshapeWindow(GLsizei width, GLsizei height)
-{
+void reshapeWindow(GLsizei width, GLsizei height) {
 	glViewport(0, 0, width, height);
 
 	glMatrixMode(GL_PROJECTION);
@@ -39,8 +33,7 @@ void reshapeWindow(GLsizei width, GLsizei height)
 	glLoadIdentity();
 }
 
-void loadAppSettings(int argc, char **argv) 
-{
+void loadAppSettings(int argc, char **argv) {
 	glutInit(&argc, argv);
 
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
