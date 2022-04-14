@@ -1,6 +1,6 @@
 
 
-void drawMetroSign(void) {
+void drawMetroSign() {
 	// metro sign box
 	drawRectangle(10, 50, 40, 80, whiteColor);
 

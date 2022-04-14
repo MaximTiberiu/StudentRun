@@ -1,8 +1,13 @@
 #include "globals.hpp"
 #include "colors.hpp"
 #include "utils.hpp"
+#include "student.hpp"
+#include "metroSign.hpp"
+#include "bottles.hpp"
+#include "metrics.hpp"
+#include "obstacles.hpp"
 
-void FundalPrincipal(void) 
+void mainBackground(void) 
 {
 	// crosswalk - gray
 	drawRectangle(-100, -140, 700, 0, crosswalkGrayColor);
@@ -62,4 +67,48 @@ void FundalPrincipal(void)
 	
 	// green light
 	drawRectangle(635, 190, 655, 210, greenColor);
+}
+
+void startgame(void)
+{
+
+	if (obstacleVerticalPositon != studentVerticalPosition || (obstacleHorizontalPosition > 90 || obstacleHorizontalPosition < -90))
+	{
+
+		obstacleHorizontalPosition -= constSpeed;
+
+		if (obstacleHorizontalPosition < -150)
+		{
+			score += 100;
+			generateNewObstacleVerticalPosition();
+			std::cout << "Score:  " << score << "\n";
+			obstacleHorizontalPosition = 800;
+		}
+
+		if (score >= scoreStep && scoreStep <= 15000)
+		{
+			constSpeed += 0.1;
+			scoreStep += 1000;
+		}
+
+		glutPostRedisplay();
+	}
+	else {
+		isGameOver = true;
+	}
+}
+
+void mainBackgroundDisplayFunction() {
+	mainBackground();
+	drawStudent();
+	drawObstacle();
+	drawMetroSign();
+	drawMgBottle();
+
+	studentController();
+
+	startgame();
+
+	displayScore();
+	displayTime();
 }

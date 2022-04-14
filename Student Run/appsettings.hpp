@@ -1,6 +1,19 @@
 #pragma once
 
+// libraries
+#include <iostream>
+#include<windows.h>
+
 // headers
+#include "mainbackground.hpp"
+#include "metrobackground.hpp"
+#include "student.hpp"
+#include "appsettings.hpp"
+#include "controllers.hpp"
+#include "obstacles.hpp"
+#include "bottles.hpp"
+// #include "metrosign.hpp"
+#include "startscreen.hpp"
 #include "metrics.hpp"
 
 void appInitialization()
@@ -36,4 +49,32 @@ void loadAppSettings(int argc, char **argv)
 	glutCreateWindow("Student Run");
 
 	appInitialization();
+}
+
+void mainDisplayFunction() {
+	glClear(GL_COLOR_BUFFER_BIT);
+
+	if (gameState == 0) {
+		startScreenDisplayFunction();
+	} else if (gameState == 1) {
+		mainBackgroundDisplayFunction();
+	}
+
+	glutPostRedisplay();
+	glutSwapBuffers();
+	glFlush();
+}
+
+void mainSpecialFunction(int key, int x, int y) {
+	if (gameState == 0) {
+		startScreenKeyboardController(key, x, y);
+	} else if (gameState == 1) {
+		studentKeyboardController(key, x, y);
+	}
+}
+
+void bootApp() {
+	glutDisplayFunc(mainDisplayFunction);
+	glutReshapeFunc(reshapeWindow);
+	glutSpecialFunc(mainSpecialFunction);
 }

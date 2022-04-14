@@ -1,72 +1,71 @@
 #pragma once
 
-void moveUp()
-{
-	if (gameState == 0) {
-		if (selectedOptionVerticalPosition < 200) {
-			selectedOptionPath = 1;
-			selectedOptionVerticalPosition++;
+
+// student
+void studentMoveUp() {
+	if (!isGameOver) {
+		if (studentVerticalPosition < 320) {
+			studentPath = 1;
+			studentVerticalPosition += 1;
 		}
 
 		glutPostRedisplay();
 	}
-	else if (gameState == 1)
-	{
-		if (!isGameOver)
-		{
-			if (studentVerticalPosition < 320)
-			{
-				studentPath = 1;
-				studentVerticalPosition += 1;
-			}
-
-			glutPostRedisplay();
-		}
-	}
 }
 
-void moveDown()
-{
-	if (gameState == 0) {
-		if (selectedOptionVerticalPosition > 120) {
-			selectedOptionPath = -1;
-			selectedOptionVerticalPosition--;
+void studentMoveDown() {
+	if (!isGameOver) {
+		if (studentVerticalPosition > 0) {
+			studentPath = -1;
+			studentVerticalPosition -= 1;
 		}
 
 		glutPostRedisplay();
 	}
-	else if (gameState == 1)
-	{
-		if (!isGameOver)
-		{
-			if (studentVerticalPosition > 0)
-			{
-				studentPath = -1;
-				studentVerticalPosition -= 1;
-			}
-
-			glutPostRedisplay();
-		}
-	}
 }
 
-void keyboardController(int key, int x, int y)
-{
-	switch (key) 
-	{
+// start screen
+void startScreenMoveUp() {
+	if (selectedOptionVerticalPosition < 200) {
+		selectedOptionPath = 1;
+		selectedOptionVerticalPosition++;
+	}
+
+	glutPostRedisplay();
+}
+
+void startScreenMoveDown() {
+	if (selectedOptionVerticalPosition > 120) {
+		selectedOptionPath = -1;
+		selectedOptionVerticalPosition--;
+	}
+
+	glutPostRedisplay();
+}
+
+
+void startScreenKeyboardController(int key, int x, int y) {
+	switch (key) {
 		case GLUT_KEY_UP:
-			moveUp();
+			startScreenMoveUp();
 			break;
 		case GLUT_KEY_DOWN:
-			moveDown();
+			startScreenMoveDown();
 			break;
 		case GLUT_KEY_RIGHT:
-			if (gameState == 0) 
-			{
-				gameState = 1;
-				startClock();
-			}
+			gameState = 1;
+			startClock();
 			break;
+	}
+}
 
+void studentKeyboardController(int key, int x, int y) {
+	switch (key) {
+		case GLUT_KEY_UP:
+			studentMoveUp();
+			break;
+		case GLUT_KEY_DOWN:
+			studentMoveDown();
+			break;
 	}
 }
