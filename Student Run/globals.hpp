@@ -32,3 +32,13 @@ double obstacleVerticalPositon = 160;
 // start screen vars
 int selectedOptionVerticalPosition = 200;
 int selectedOptionPath = 0;
+
+void resetGlobalVars() {
+	isGameOver = false;
+	scoreStep = 1000;
+	constSpeed = 0.15;
+	studentVerticalPosition = 0;
+	studentPath = 0;
+	obstacleHorizontalPosition = 800;
+	obstacleVerticalPositon = 160;
+}

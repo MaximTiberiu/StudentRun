@@ -15,6 +15,7 @@
 // #include "metrosign.hpp"
 #include "startscreen.hpp"
 #include "metrics.hpp"
+#include "finishscreen.hpp"
 
 void appInitialization()
 {
@@ -58,6 +59,10 @@ void mainDisplayFunction() {
 		startScreenDisplayFunction();
 	} else if (gameState == 1) {
 		mainBackgroundDisplayFunction();
+	} else if (gameState == 2) {
+		// metro
+	} else if (gameState == 3) {
+		finishScreenDisplayFunction();
 	}
 
 	glutPostRedisplay();
@@ -70,6 +75,8 @@ void mainSpecialFunction(int key, int x, int y) {
 		startScreenKeyboardController(key, x, y);
 	} else if (gameState == 1) {
 		studentKeyboardController(key, x, y);
+	} else if (gameState == 3) {
+		finishScreenKeyboardController(key, x, y);
 	}
 }
 

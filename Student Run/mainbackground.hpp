@@ -95,6 +95,7 @@ void startgame(void)
 	}
 	else {
 		isGameOver = true;
+		gameState = 3;
 	}
 }
 
