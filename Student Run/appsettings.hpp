@@ -53,7 +53,7 @@ void mainDisplayFunction() {
 	} else if (gameState == 1) {
 		mainBackgroundDisplayFunction();
 	} else if (gameState == 2) {
-		// metro
+		metroBackgroundDisplayFunction();
 	} else if (gameState == 3) {
 		finishScreenDisplayFunction();
 	}

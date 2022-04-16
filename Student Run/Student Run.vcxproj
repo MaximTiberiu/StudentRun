@@ -161,6 +161,8 @@
     <ClInclude Include="obstacles.hpp" />
     <ClInclude Include="startscreen.hpp" />
     <ClInclude Include="student.hpp" />
+    <ClInclude Include="subwayBar.hpp" />
+    <ClInclude Include="university.hpp" />
     <ClInclude Include="utils.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

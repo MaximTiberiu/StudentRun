@@ -88,3 +88,17 @@ void metroBackground(void) {
 	drawLine(-100, 350, 1500, 350, metroCarMarginColor, 3);
 	drawLine(-100, 400, 1500, 400, metroCarMarginColor, 3);
 }
+
+void metroBackgroundDisplayFunction() {
+	metroBackground();
+	drawStudent();
+
+	drawMetroBackgroundPassengerObstacle();
+
+	studentController();
+
+	startgame();
+
+	displayScore();
+	displayTime();
+}
