@@ -66,7 +66,7 @@ void mainDisplayFunction() {
 void mainSpecialFunction(int key, int x, int y) {
 	if (gameState == 0) {
 		startScreenKeyboardController(key, x, y);
-	} else if (gameState == 1) {
+	} else if (gameState == 1 || gameState == 2) {
 		studentKeyboardController(key, x, y);
 	} else if (gameState == 3) {
 		finishScreenKeyboardController(key, x, y);

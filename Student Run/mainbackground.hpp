@@ -5,12 +5,15 @@
 
 // headers - elements
 #include "student.hpp"
-#include "metroSign.hpp"
+#include "metrosign.hpp"
 #include "bottles.hpp"
 #include "obstacles.hpp"
 
 // headers - metrics
 #include "metrics.hpp"
+
+// headers - collisions
+#include "collisions.hpp"
 
 
 void mainBackground(void) {
@@ -74,33 +77,13 @@ void mainBackground(void) {
 	drawRectangle(635, 190, 655, 210, greenColor);
 }
 
-void startgame(void) {
-	if (obstacleVerticalPositon != studentVerticalPosition || (obstacleHorizontalPosition > 90 || obstacleHorizontalPosition < -90)) {
-
-		obstacleHorizontalPosition -= constSpeed;
-
-		if (obstacleHorizontalPosition < -150) {
-			score += 100;
-			generateNewObstacleVerticalPosition();
-			std::cout << "Score:  " << score << "\n";
-			obstacleHorizontalPosition = 800;
-		}
-
-		if (score >= scoreStep && scoreStep <= 15000) {
-			constSpeed += 0.1;
-			scoreStep += 1000;
-		}
-
-		glutPostRedisplay();
-	} else {
-		isGameOver = true;
-		gameState = 3;
-	}
-}
-
 void mainBackgroundDisplayFunction() {
 	mainBackground();
 	drawStudent();
+
+	if (score % 4 == 0 && score != 0) {
+		drawMetroSign();
+	}
 
 	if (obstacleVerticalPositon == verticalPositions[0]) {
 		drawMainBackgroundSewerCapObstacle();
@@ -111,7 +94,7 @@ void mainBackgroundDisplayFunction() {
 
 	studentController();
 
-	startgame();
+	collisions();
 
 	displayScore();
 	displayTime();
