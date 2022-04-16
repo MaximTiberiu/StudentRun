@@ -81,8 +81,18 @@ void mainBackgroundDisplayFunction() {
 	mainBackground();
 	drawStudent();
 
-	if (score % 4 == 0 && score != 0) {
+	if (score % 400 == 0 && score != 0) {
 		drawMetroSign();
+	}
+
+	if (score % 500 == 0 && score != 0) {
+		if (bottleVerticalPositon == verticalPositions[0]) {
+			drawCaBottle();
+		} else if (bottleVerticalPositon == verticalPositions[1]) {
+			drawMgBottle();
+		} else if (bottleVerticalPositon == verticalPositions[2]) {
+			drawVitCBottle();
+		}
 	}
 
 	if (obstacleVerticalPositon == verticalPositions[0]) {

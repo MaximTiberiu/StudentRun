@@ -95,6 +95,18 @@ void metroBackgroundDisplayFunction() {
 
 	drawMetroBackgroundPassengerObstacle();
 
+	if (score % 5 == 0 && score != 0) {
+		if (bottleVerticalPositon == verticalPositions[0]) {
+			drawCaBottle();
+		}
+		else if (bottleVerticalPositon == verticalPositions[1]) {
+			drawMgBottle();
+		}
+		else if (bottleVerticalPositon == verticalPositions[2]) {
+			drawVitCBottle();
+		}
+	}
+
 	studentController();
 
 	collisions();
