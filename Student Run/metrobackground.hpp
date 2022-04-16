@@ -5,9 +5,9 @@
 
 // headers - elements
 #include "student.hpp"
-#include "metroSign.hpp"
 #include "bottles.hpp"
 #include "obstacles.hpp"
+#include "metrostopbarsign.hpp"
 
 // headers - metrics
 #include "metrics.hpp"
@@ -94,6 +94,8 @@ void metroBackgroundDisplayFunction() {
 	drawStudent();
 
 	drawMetroBackgroundPassengerObstacle();
+	
+	drawMetroStopBarSign();
 
 	if (score % 500 == 0 && score != 0) {
 		isBottleCollisionEnabled = true;

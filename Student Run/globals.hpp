@@ -40,6 +40,11 @@ double bottleHorizontalPosition = 800;
 double bottleVerticalPositon = 160;
 bool isBottleCollisionEnabled = false;
 
+// metro stop bar sign global vars
+double metroStopBarSignHorizontalPosition = 800;
+double metroStopBarSignVerticalPosition = 160;
+bool isMetroStopBarSignCollisionEnabled = false;
+
 // start screen vars
 int selectedOptionVerticalPosition = 200;
 int selectedOptionPath = 0;
@@ -67,4 +72,9 @@ void resetGlobalVars() {
 	bottleHorizontalPosition = 800;
 	bottleVerticalPositon = 160;
 	isBottleCollisionEnabled = false;
+
+	// metro stop bar sign global vars
+	metroStopBarSignHorizontalPosition = 800;
+	metroStopBarSignVerticalPosition = 160;
+	isMetroStopBarSignCollisionEnabled = false;
 }
