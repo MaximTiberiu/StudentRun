@@ -32,7 +32,11 @@ double obstacleVerticalPositon = 160;
 
 // metro sign global vars
 double metroSignHorizontalPosition = 800;
-double metroSignVerticalPositon = 0;
+double metroSignVerticalPositon = 160;
+
+// bottle global vars
+double bottleHorizontalPosition = 800;
+double bottleVerticalPositon = 160;
 
 // start screen vars
 int selectedOptionVerticalPosition = 200;
