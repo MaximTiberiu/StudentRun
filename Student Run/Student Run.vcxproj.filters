@@ -62,7 +62,7 @@
     <ClInclude Include="finishscreen.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="subwayBar.hpp">
+    <ClInclude Include="metrostopbar.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="university.hpp">

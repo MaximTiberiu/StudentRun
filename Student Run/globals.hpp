@@ -44,10 +44,24 @@ bool isBottleCollisionEnabled = false;
 double metroStopBarSignHorizontalPosition = 800;
 double metroStopBarSignVerticalPosition = 160;
 bool isMetroStopBarSignCollisionEnabled = false;
+bool isMetroStopBarSignActive = false;
 
 // start screen vars
 int selectedOptionVerticalPosition = 200;
 int selectedOptionPath = 0;
+
+// bar settings
+float leftBarMargin = -30.0f;
+float rightBarMargin = 600.0f;
+
+// coloured bars settings
+float redBarWidth = 250.0f;
+float orangeBarWidth = 50.0f;
+float greenBarWidth = 20.0f;
+
+// pointer settings
+double currentPointerPosition = 0.0;
+double speedFactor = 0.3;
 
 void resetGlobalVars() {
 	// game global vars
@@ -77,4 +91,9 @@ void resetGlobalVars() {
 	metroStopBarSignHorizontalPosition = 800;
 	metroStopBarSignVerticalPosition = 160;
 	isMetroStopBarSignCollisionEnabled = false;
+	isMetroStopBarSignActive = false;
+
+	// pointer settings
+	currentPointerPosition = 0.0;
+	speedFactor = 0.3;
 }

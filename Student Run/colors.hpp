@@ -22,6 +22,7 @@ Color blackColor(0.00f, 0.00f, 0.00f);
 Color greenColor(0.00f, 1.00f, 0.00f);
 Color blueColor(0.00f, 0.00f, 1.00f);
 Color yellowColor(1.00f, 1.00f, 0.00f);
+Color orangeColor(0.95f, 0.48f, 0.01f);
 
 // app color
 Color mainBackgroundColor(0.89f, 0.84f, 0.86f);
