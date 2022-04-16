@@ -33,23 +33,38 @@ double obstacleVerticalPositon = 160;
 // metro sign global vars
 double metroSignHorizontalPosition = 800;
 double metroSignVerticalPositon = 160;
+bool isMetroSignCollisionEnabled = false;
 
 // bottle global vars
 double bottleHorizontalPosition = 800;
 double bottleVerticalPositon = 160;
+bool isBottleCollisionEnabled = false;
 
 // start screen vars
 int selectedOptionVerticalPosition = 200;
 int selectedOptionPath = 0;
 
 void resetGlobalVars() {
+	// game global vars
 	isGameOver = false;
 	scoreStep = 1000;
 	constSpeed = 0.15;
+
+	// student global vars
 	studentVerticalPosition = 0;
 	studentPath = 0;
+
+	// obstacle global vars
 	obstacleHorizontalPosition = 800;
 	obstacleVerticalPositon = 160;
+
+	// metro sign global vars
 	metroSignHorizontalPosition = 800;
 	metroSignVerticalPositon = 160;
+	isMetroSignCollisionEnabled = false;
+
+	// bottle global vars
+	bottleHorizontalPosition = 800;
+	bottleVerticalPositon = 160;
+	isBottleCollisionEnabled = false;
 }

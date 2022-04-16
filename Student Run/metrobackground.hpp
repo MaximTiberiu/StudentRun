@@ -95,7 +95,9 @@ void metroBackgroundDisplayFunction() {
 
 	drawMetroBackgroundPassengerObstacle();
 
-	if (score % 5 == 0 && score != 0) {
+	if (score % 500 == 0 && score != 0) {
+		isBottleCollisionEnabled = true;
+
 		if (bottleVerticalPositon == verticalPositions[0]) {
 			drawCaBottle();
 		}

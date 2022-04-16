@@ -42,11 +42,14 @@ void obstacleCollision() {
 void metroSignCollision() {
 	if (metroSignVerticalPositon != studentVerticalPosition || (metroSignHorizontalPosition > 90 || metroSignHorizontalPosition < -90)) {
 
-		metroSignHorizontalPosition -= constSpeed;
+		if (isMetroSignCollisionEnabled) {
+			metroSignHorizontalPosition -= constSpeed;
+		}
 
 		if (metroSignHorizontalPosition < -150) {
 			generateNewMetroSignVerticalPosition();
 			metroSignHorizontalPosition = 800;
+			isMetroSignCollisionEnabled = false;
 		}
 
 		glutPostRedisplay();
@@ -58,12 +61,14 @@ void metroSignCollision() {
 
 void bottleCollision() {
 	if (bottleVerticalPositon != studentVerticalPosition || (bottleHorizontalPosition > 90 || bottleHorizontalPosition < -90)) {
-
-		bottleHorizontalPosition -= constSpeed;
+		if (isBottleCollisionEnabled) {
+			bottleHorizontalPosition -= constSpeed;
+		}
 
 		if (bottleHorizontalPosition < -150) {
 			generateNewBottleVerticalPosition();
 			bottleHorizontalPosition = 800;
+			isBottleCollisionEnabled = false;
 		}
 
 		glutPostRedisplay();

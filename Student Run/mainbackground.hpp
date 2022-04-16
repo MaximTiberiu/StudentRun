@@ -82,10 +82,14 @@ void mainBackgroundDisplayFunction() {
 	drawStudent();
 
 	if (score % 400 == 0 && score != 0) {
+		isMetroSignCollisionEnabled = true;
+
 		drawMetroSign();
 	}
 
 	if (score % 500 == 0 && score != 0) {
+		isBottleCollisionEnabled = true;
+
 		if (bottleVerticalPositon == verticalPositions[0]) {
 			drawCaBottle();
 		} else if (bottleVerticalPositon == verticalPositions[1]) {
