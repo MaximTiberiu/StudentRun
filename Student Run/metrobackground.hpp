@@ -5,9 +5,10 @@
 
 // headers - elements
 #include "student.hpp"
-#include "metroSign.hpp"
 #include "bottles.hpp"
 #include "obstacles.hpp"
+#include "metrostopbarsign.hpp"
+#include "metrostopbar.hpp"
 
 // headers - metrics
 #include "metrics.hpp"
@@ -94,6 +95,12 @@ void metroBackgroundDisplayFunction() {
 	drawStudent();
 
 	drawMetroBackgroundPassengerObstacle();
+	
+	if (score % 600 == 0 && score != 0 && !isMetroStopBarSignActive) {
+		isMetroStopBarSignCollisionEnabled = true;
+
+		drawMetroStopBarSign();
+	}
 
 	if (score % 500 == 0 && score != 0) {
 		isBottleCollisionEnabled = true;
@@ -115,4 +122,8 @@ void metroBackgroundDisplayFunction() {
 
 	displayScore();
 	displayTime();
+
+	if (isMetroStopBarSignActive) {
+		drawMetroStopBar();
+	}
 }

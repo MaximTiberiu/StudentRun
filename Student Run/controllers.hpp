@@ -27,6 +27,16 @@ void studentMoveDown() {
 	}
 }
 
+void studentPressRight() {
+	if (isMetroStopBarSignActive) {
+		speedFactor = 0;
+		addMetroStopBarScore();
+		isMetroStopBarSignActive = false;
+		gameState = 1;
+		speedFactor = 0.3;
+	}
+}
+
 // start screen
 void startScreenMoveUp() {
 	if (selectedOptionVerticalPosition < 200) {
@@ -98,6 +108,9 @@ void studentKeyboardController(int key, int x, int y) {
 			break;
 		case GLUT_KEY_DOWN:
 			studentMoveDown();
+			break;
+		case GLUT_KEY_RIGHT:
+			studentPressRight();
 			break;
 	}
 }

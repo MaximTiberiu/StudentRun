@@ -14,6 +14,7 @@ GLdouble topMargin = 460.0;
 int score;
 clock_t startTime;
 int totalTime;
+int finalScore = 15000;
 
 // game global vars
 bool isGameOver = false;
@@ -40,9 +41,33 @@ double bottleHorizontalPosition = 800;
 double bottleVerticalPositon = 160;
 bool isBottleCollisionEnabled = false;
 
+// metro stop bar sign global vars
+double metroStopBarSignHorizontalPosition = 800;
+double metroStopBarSignVerticalPosition = 160;
+bool isMetroStopBarSignCollisionEnabled = false;
+bool isMetroStopBarSignActive = false;
+
 // start screen vars
 int selectedOptionVerticalPosition = 200;
 int selectedOptionPath = 0;
+
+// bar settings
+float leftBarMargin = -30.0f;
+float rightBarMargin = 600.0f;
+
+// coloured bars settings
+float redBarWidth = 250.0f;
+float orangeBarWidth = 50.0f;
+float greenBarWidth = 20.0f;
+
+// pointer settings
+double currentPointerPosition = 0.0;
+double speedFactor = 0.3;
+
+float redBar = leftBarMargin + redBarWidth;
+float firstOrangeBar = redBar + orangeBarWidth;
+float greenBar = firstOrangeBar + greenBarWidth;
+float secondOrangeBar = greenBar + orangeBarWidth;
 
 void resetGlobalVars() {
 	// game global vars
@@ -67,4 +92,14 @@ void resetGlobalVars() {
 	bottleHorizontalPosition = 800;
 	bottleVerticalPositon = 160;
 	isBottleCollisionEnabled = false;
+
+	// metro stop bar sign global vars
+	metroStopBarSignHorizontalPosition = 800;
+	metroStopBarSignVerticalPosition = 160;
+	isMetroStopBarSignCollisionEnabled = false;
+	isMetroStopBarSignActive = false;
+
+	// pointer settings
+	currentPointerPosition = 0.0;
+	speedFactor = 0.3;
 }

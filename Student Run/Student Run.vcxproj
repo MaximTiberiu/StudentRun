@@ -159,10 +159,11 @@
     <ClInclude Include="metrics.hpp" />
     <ClInclude Include="metrobackground.hpp" />
     <ClInclude Include="metrosign.hpp" />
+    <ClInclude Include="metrostopbarsign.hpp" />
     <ClInclude Include="obstacles.hpp" />
     <ClInclude Include="startscreen.hpp" />
     <ClInclude Include="student.hpp" />
-    <ClInclude Include="subwayBar.hpp" />
+    <ClInclude Include="metrostopbar.hpp" />
     <ClInclude Include="university.hpp" />
     <ClInclude Include="utils.hpp" />
   </ItemGroup>
