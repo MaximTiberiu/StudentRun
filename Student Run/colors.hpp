@@ -24,7 +24,7 @@ Color blueColor(0.00f, 0.00f, 1.00f);
 Color yellowColor(1.00f, 1.00f, 0.00f);
 
 // app color
-Color mainBackgroundColor(0.98f, 0.929f, 0.792f);
+Color mainBackgroundColor(0.89f, 0.84f, 0.86f);
 
 // metro background colors
 Color metroFloorColor(0.22f, 0.28f, 0.44f);
@@ -54,3 +54,15 @@ Color crosswalkGrayColor(0.50f, 0.50f, 0.50f);
 Color skyColor(0.60f, 0.90f, 1.00f);
 Color benchDarkColor(0.60f, 0.30f, 0.30f);
 Color benchLightColor(0.70f, 0.30f, 0.30f);
+
+// bird obstacle colors
+Color birdColor(0.51f, 0.52f, 0.52f);
+Color birdWingColor(0.30f, 0.30f, 0.30f);
+Color birdBeakColor(0.84f, 0.17f, 0.0f);
+Color sewerColor(0.54f, 0.57f, 0.57f);
+Color treeTrunkColor(0.33f, 0.14f, 0.01f);
+Color treeLeavesColor(0.08f, 0.32f, 0.02f);
+Color metroBarHandleColor(0.09f, 0.25f, 0.53f);
+
+// student/passenger color
+Color skinColor(1.00f, 0.90f, 0.86f);

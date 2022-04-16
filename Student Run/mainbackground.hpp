@@ -12,6 +12,7 @@
 // headers - metrics
 #include "metrics.hpp"
 
+
 void mainBackground(void) {
 	// crosswalk - gray
 	drawRectangle(-100, -140, 700, 0, crosswalkGrayColor);
@@ -100,9 +101,13 @@ void startgame(void) {
 void mainBackgroundDisplayFunction() {
 	mainBackground();
 	drawStudent();
-	drawObstacle();
-	drawMetroSign();
-	drawMgBottle();
+
+	if (obstacleVerticalPositon == verticalPositions[0]) {
+		drawMainBackgroundSewerCapObstacle();
+	}
+	else if (obstacleVerticalPositon == verticalPositions[1] || obstacleVerticalPositon == verticalPositions[2]) {
+		drawMainBackgroundBirdObstacle();
+	}
 
 	studentController();
 

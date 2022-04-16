@@ -62,5 +62,11 @@
     <ClInclude Include="finishscreen.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="subwayBar.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="university.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
