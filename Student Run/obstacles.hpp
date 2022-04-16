@@ -75,7 +75,3 @@ void drawMetroBackgroundPassengerObstacle() {
 
 	glPopMatrix();
 }
-
-void generateNewObstacleVerticalPosition() {
-	obstacleVerticalPositon = verticalPositions[rand() % 3];
-}

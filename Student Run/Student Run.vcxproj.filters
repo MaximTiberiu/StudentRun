@@ -38,7 +38,7 @@
     <ClInclude Include="metrics.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="metroSign.hpp">
+    <ClInclude Include="metrosign.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="obstacles.hpp">
@@ -66,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="university.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="collisions.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

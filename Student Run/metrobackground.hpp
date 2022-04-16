@@ -97,7 +97,7 @@ void metroBackgroundDisplayFunction() {
 
 	studentController();
 
-	startgame();
+	collisions();
 
 	displayScore();
 	displayTime();

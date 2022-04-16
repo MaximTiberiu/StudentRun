@@ -4,9 +4,15 @@
 #include "utils.hpp"
 
 void drawMetroSign() {
+	glPushMatrix();
+
+	glTranslated(metroSignHorizontalPosition, metroSignVerticalPositon, 0.0);
+
 	// metro sign box
-	drawRectangle(10, 50, 40, 80, whiteColor);
+	drawRectangle(-45, -15, -15, 15, whiteColor);
 
 	// metro sign text
-	renderString(13, 55, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"M", blueColor);
+	renderString(-40, -10, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"M", blueColor);
+
+	glPopMatrix();
 }
