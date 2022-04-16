@@ -37,3 +37,13 @@ void displayTime() {
 
 	renderString(450.0f, 425.0f, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)timeText, blackColor);
 }
+
+void addMetroStopBarScore() {
+	if ((currentPointerPosition >= leftBarMargin && currentPointerPosition < redBar) || (currentPointerPosition >= secondOrangeBar && currentPointerPosition <= rightBarMargin)) {
+		score += 250;
+	} else if ((currentPointerPosition >= redBar && currentPointerPosition < firstOrangeBar) || (currentPointerPosition >= greenBar && currentPointerPosition < secondOrangeBar)) {
+		score += 500;
+	} else if ((currentPointerPosition >= firstOrangeBar && currentPointerPosition < greenBar)) {
+		score += 1000;
+	}
+}

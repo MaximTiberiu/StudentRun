@@ -14,6 +14,7 @@ GLdouble topMargin = 460.0;
 int score;
 clock_t startTime;
 int totalTime;
+int finalScore = 15000;
 
 // game global vars
 bool isGameOver = false;
@@ -62,6 +63,11 @@ float greenBarWidth = 20.0f;
 // pointer settings
 double currentPointerPosition = 0.0;
 double speedFactor = 0.3;
+
+float redBar = leftBarMargin + redBarWidth;
+float firstOrangeBar = redBar + orangeBarWidth;
+float greenBar = firstOrangeBar + greenBarWidth;
+float secondOrangeBar = greenBar + orangeBarWidth;
 
 void resetGlobalVars() {
 	// game global vars
