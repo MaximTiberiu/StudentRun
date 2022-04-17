@@ -39,7 +39,7 @@ void studentPressRight() {
 
 // start screen
 void startScreenMoveUp() {
-	if (selectedOptionVerticalPosition < 200) {
+	if (selectedOptionVerticalPosition < 240) {
 		selectedOptionPath = 1;
 		selectedOptionVerticalPosition++;
 	}
