@@ -74,5 +74,8 @@
     <ClInclude Include="metrostopbarsign.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="helpscreen.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
