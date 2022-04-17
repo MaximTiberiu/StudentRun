@@ -155,6 +155,7 @@
     <ClInclude Include="controllers.hpp" />
     <ClInclude Include="finishscreen.hpp" />
     <ClInclude Include="globals.hpp" />
+    <ClInclude Include="helpscreen.hpp" />
     <ClInclude Include="mainbackground.hpp" />
     <ClInclude Include="metrics.hpp" />
     <ClInclude Include="metrobackground.hpp" />

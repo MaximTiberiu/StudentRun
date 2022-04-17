@@ -57,11 +57,13 @@ void startScreenMoveDown() {
 }
 
 void startScreenSelectOption() {
-	if (selectedOptionVerticalPosition == 200) {
+	if (selectedOptionVerticalPosition == 240) {
 		gameState = 1;
 		startClock();
-	} else if (selectedOptionVerticalPosition == 160) {
+	} else if (selectedOptionVerticalPosition == 200) {
 		// TODO: Load Game
+	} else if (selectedOptionVerticalPosition == 160) {
+		gameState = 4;
 	} else {
 		exit(0);
 	}
@@ -99,6 +101,32 @@ void finishScreenSelectOption() {
 	}
 }
 
+// pause screen
+void helpScreenMoveUp() {
+	if (selectedOptionVerticalPosition < 160) {
+		selectedOptionPath = 1;
+		selectedOptionVerticalPosition++;
+	}
+
+	glutPostRedisplay();
+}
+
+void helpScreenMoveDown() {
+	if (selectedOptionVerticalPosition > 120) {
+		selectedOptionPath = -1;
+		selectedOptionVerticalPosition--;
+	}
+
+	glutPostRedisplay();
+}
+
+void helpScreenSelectOption() {
+	if (selectedOptionVerticalPosition == 160) {
+		gameState = 0;
+	} else {
+		exit(0);
+	}
+}
 
 // keyboard controllers
 void studentKeyboardController(int key, int x, int y) {
@@ -140,5 +168,19 @@ void finishScreenKeyboardController(int key, int x, int y) {
 		case GLUT_KEY_RIGHT:
 			finishScreenSelectOption();
 			break;
+	}
+}
+
+void helpScreenKeyboardController(int key, int x, int y) {
+	switch (key) {
+	case GLUT_KEY_UP:
+		helpScreenMoveUp();
+		break;
+	case GLUT_KEY_DOWN:
+		helpScreenMoveDown();
+		break;
+	case GLUT_KEY_RIGHT:
+		helpScreenSelectOption();
+		break;
 	}
 }

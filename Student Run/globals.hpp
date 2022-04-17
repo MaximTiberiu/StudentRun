@@ -47,8 +47,8 @@ double metroStopBarSignVerticalPosition = 160;
 bool isMetroStopBarSignCollisionEnabled = false;
 bool isMetroStopBarSignActive = false;
 
-// start screen vars
-int selectedOptionVerticalPosition = 200;
+// screens vars
+int selectedOptionVerticalPosition = 240;
 int selectedOptionPath = 0;
 
 // bar settings
