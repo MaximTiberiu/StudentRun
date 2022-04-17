@@ -61,7 +61,8 @@ void startScreenSelectOption() {
 		gameState = 1;
 		startClock();
 	} else if (selectedOptionVerticalPosition == 200) {
-		// TODO: Load Game
+		loadGame();
+		startClock();
 	} else if (selectedOptionVerticalPosition == 160) {
 		gameState = 4;
 	} else {

@@ -144,51 +144,51 @@ void saveGame() {
 }
 
 void loadGame() {
-	std::ofstream out("save.txt");
+	std::ifstream in("save.txt");
 
 	// metrics
-	out << score << "\n";
-	out << totalTime << "\n";
+	in >> score;
+	in >> totalTime;
 
 	// game
-	out << isGameOver << "\n";
-	out << gameState << "\n";
+	in >> isGameOver;
+	in >> gameState;
 
 	// student
-	out << studentVerticalPosition << "\n";
-	out << studentPath << "\n";
+	in >> studentVerticalPosition;
+	in >> studentPath;
 
 	// obstacle
-	out << obstacleHorizontalPosition << "\n";
-	out << obstacleVerticalPositon << "\n";
+	in >> obstacleHorizontalPosition;
+	in >> obstacleVerticalPositon;
 
 	// metro sign
-	out << metroSignHorizontalPosition << "\n";
-	out << metroSignVerticalPositon << "\n";
-	out << isMetroSignCollisionEnabled << "\n";
+	in >> metroSignHorizontalPosition;
+	in >> metroSignVerticalPositon;
+	in >> isMetroSignCollisionEnabled;
 
 	// bottle
-	out << bottleHorizontalPosition << "\n";
-	out << bottleVerticalPositon << "\n";
-	out << isBottleCollisionEnabled << "\n";
+	in >> bottleHorizontalPosition;
+	in >> bottleVerticalPositon;
+	in >> isBottleCollisionEnabled;
 
 	// metro stop bar sign
-	out << metroStopBarSignHorizontalPosition << "\n";
-	out << metroStopBarSignVerticalPosition << "\n";
-	out << isMetroStopBarSignCollisionEnabled << "\n";
-	out << isMetroStopBarSignActive << "\n";
+	in >> metroStopBarSignHorizontalPosition;
+	in >> metroStopBarSignVerticalPosition;
+	in >> isMetroStopBarSignCollisionEnabled;
+	in >> isMetroStopBarSignActive;
 
 	// screens
-	out << selectedOptionVerticalPosition << "\n";
-	out << selectedOptionPath << "\n";
+	in >> selectedOptionVerticalPosition;
+	in >> selectedOptionPath;
 
 	// pointer
-	out << currentPointerPosition << "\n";
+	in >> currentPointerPosition;
 
 	// university
-	out << universityHorizontalPosition << "\n";
-	out << universityVerticalPositon << "\n";
-	out << isUniversityCollisionEnabled << "\n";
+	in >> universityHorizontalPosition;
+	in >> universityVerticalPositon;
+	in >> isUniversityCollisionEnabled;
 
-	out.close();
+	in.close();
 }
