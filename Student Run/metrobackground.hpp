@@ -9,6 +9,7 @@
 #include "obstacles.hpp"
 #include "metrostopbarsign.hpp"
 #include "metrostopbar.hpp"
+#include "university.hpp"
 
 // headers - metrics
 #include "metrics.hpp"
@@ -125,5 +126,12 @@ void metroBackgroundDisplayFunction() {
 
 	if (isMetroStopBarSignActive) {
 		drawMetroStopBar();
+	}
+
+	if (score >= finalScore) {
+		gameState = 1;
+		isUniversityCollisionEnabled = true;
+
+		drawUniversity();
 	}
 }
