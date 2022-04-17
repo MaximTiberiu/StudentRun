@@ -84,7 +84,7 @@ void updateHighestScore() {
 	in >> highestScore;
 	in.close();
 
-	if (totalTime < highestScore || totalTime != 0) {
+	if (totalTime < highestScore || totalTime == 0) {
 		highestScore = totalTime;
 	}
 
