@@ -8,6 +8,7 @@
 #include "metrosign.hpp"
 #include "bottles.hpp"
 #include "obstacles.hpp"
+#include "university.hpp"
 
 // headers - metrics
 #include "metrics.hpp"
@@ -112,4 +113,10 @@ void mainBackgroundDisplayFunction() {
 
 	displayScore();
 	displayTime();
+
+	if (score >= finalScore && !isGameOver) {
+		isUniversityCollisionEnabled = true;
+
+		drawUniversity();
+	}
 }

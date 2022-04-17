@@ -107,6 +107,25 @@ void metroStopBarSignCollision() {
 	}
 }
 
+void universityCollision() {
+	if ((universityHorizontalPosition > 90 || universityHorizontalPosition < -90)) {
+
+		if (isUniversityCollisionEnabled) {
+			universityHorizontalPosition -= constSpeed;
+		}
+
+		if (universityHorizontalPosition < -150) {
+			universityHorizontalPosition = 800;
+		}
+
+		glutPostRedisplay();
+	}
+	else {
+		isGameOver = true;
+		gameState = 3;
+	}
+}
+
 void collisions() {
 
 	// obstacle collision
@@ -118,6 +137,9 @@ void collisions() {
 	// bottle collision
 	bottleCollision();
 
-	// metro stop bar sign
+	// metro stop bar sign collision
 	metroStopBarSignCollision();
+
+	// university collision
+	universityCollision();
 }

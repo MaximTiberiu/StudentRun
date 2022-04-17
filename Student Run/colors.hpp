@@ -67,3 +67,9 @@ Color metroBarHandleColor(0.09f, 0.25f, 0.53f);
 
 // student/passenger color
 Color skinColor(1.00f, 0.90f, 0.86f);
+
+// university colors
+Color darkishGrayColor(0.39f, 0.40f, 0.38f);
+Color whiteishGrayColor(0.67f, 0.68f, 0.66f);
+Color universityWindowsColor(0.53f, 0.84f, 1.00f);
+Color universityDoorColor(0.18f, 0.09f, 0.03f);

@@ -14,7 +14,7 @@ GLdouble topMargin = 460.0;
 int score;
 clock_t startTime;
 int totalTime;
-int finalScore = 15000;
+int finalScore = 1500;
 
 // game global vars
 bool isGameOver = false;
@@ -69,11 +69,18 @@ float firstOrangeBar = redBar + orangeBarWidth;
 float greenBar = firstOrangeBar + greenBarWidth;
 float secondOrangeBar = greenBar + orangeBarWidth;
 
+// university
+double universityHorizontalPosition = 800;
+double universityVerticalPositon = 160;
+bool isUniversityCollisionEnabled = false;
+
+
 void resetGlobalVars() {
 	// game global vars
 	isGameOver = false;
 	scoreStep = 1000;
 	constSpeed = 0.15;
+	score = 0;
 
 	// student global vars
 	studentVerticalPosition = 0;
@@ -102,4 +109,9 @@ void resetGlobalVars() {
 	// pointer settings
 	currentPointerPosition = 0.0;
 	speedFactor = 0.3;
+
+	// university
+	universityHorizontalPosition = 800;
+	universityVerticalPositon = 160;
+	isUniversityCollisionEnabled = false;
 }
