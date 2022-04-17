@@ -13,8 +13,8 @@ GLdouble topMargin = 460.0;
 // metrics
 int score;
 clock_t startTime;
-int totalTime;
-int finalScore = 100;
+int totalTime = 0;
+int finalScore = 2500;
 
 // game global vars
 bool isGameOver = false;
@@ -73,6 +73,10 @@ float secondOrangeBar = greenBar + orangeBarWidth;
 double universityHorizontalPosition = 800;
 double universityVerticalPositon = 160;
 bool isUniversityCollisionEnabled = false;
+
+// pause screen
+int pausedGameState;
+int pausedTime = 0;
 
 
 void resetGlobalVars() {

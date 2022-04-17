@@ -77,9 +77,15 @@
     <ClInclude Include="helpscreen.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="pausescreen.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="score.txt">
+      <Filter>Header Files</Filter>
+    </Text>
+    <Text Include="save.txt">
       <Filter>Header Files</Filter>
     </Text>
   </ItemGroup>
