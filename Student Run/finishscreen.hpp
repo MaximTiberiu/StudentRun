@@ -22,6 +22,16 @@ void finishScreenSelectedOptionController() {
 }
 
 void finishScreen() {
+	renderString(100, 440, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"Student Run. A connoisseur-only game.", redColor);
+	if (isGameOver && score >= finalScore) {
+		renderString(100, 420, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"WINNER!", orangeColor);
+		displayCurrentScore();
+	} else {
+		renderString(100, 420, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"GAME OVER!", orangeColor);
+	}
+	
+	displayHighestScore();
+
 	renderString(250, 200, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"RESTART GAME", blackColor);
 	renderString(255, 160, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"MAIN MENU", blackColor);
 	renderString(255, 120, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"QUIT GAME", blackColor);
