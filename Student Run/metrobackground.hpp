@@ -108,11 +108,9 @@ void metroBackgroundDisplayFunction() {
 
 		if (bottleVerticalPositon == verticalPositions[0]) {
 			drawCaBottle();
-		}
-		else if (bottleVerticalPositon == verticalPositions[1]) {
+		} else if (bottleVerticalPositon == verticalPositions[1]) {
 			drawMgBottle();
-		}
-		else if (bottleVerticalPositon == verticalPositions[2]) {
+		} else if (bottleVerticalPositon == verticalPositions[2]) {
 			drawVitCBottle();
 		}
 	}

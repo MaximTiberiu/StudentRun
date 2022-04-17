@@ -14,7 +14,7 @@ GLdouble topMargin = 460.0;
 int score;
 clock_t startTime;
 int totalTime = 0;
-int finalScore = 2500;
+int finalScore = 3500;
 
 // game global vars
 bool isGameOver = false;
@@ -48,7 +48,7 @@ bool isMetroStopBarSignCollisionEnabled = false;
 bool isMetroStopBarSignActive = false;
 
 // screens vars
-int selectedOptionVerticalPosition = 200;
+int selectedOptionVerticalPosition = 240;
 int selectedOptionPath = 0;
 
 // bar settings

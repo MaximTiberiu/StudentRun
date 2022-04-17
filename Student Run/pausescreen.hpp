@@ -14,11 +14,9 @@ void pauseScreenDrawSelectedOption() {
 void pauseScreenSelectedOptionController() {
 	if (selectedOptionPath == 1 && (selectedOptionVerticalPosition != 160 && selectedOptionVerticalPosition != 200 && selectedOptionVerticalPosition != 240)) {
 		selectedOptionVerticalPosition++;
-	}
-	else if (selectedOptionPath == -1 && (selectedOptionVerticalPosition != 200 && selectedOptionVerticalPosition != 160 && selectedOptionVerticalPosition != 120)) {
+	} else if (selectedOptionPath == -1 && (selectedOptionVerticalPosition != 200 && selectedOptionVerticalPosition != 160 && selectedOptionVerticalPosition != 120)) {
 		selectedOptionVerticalPosition--;
-	}
-	else {
+	} else {
 		selectedOptionPath = 0;
 	}
 }

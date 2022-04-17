@@ -36,8 +36,7 @@ void obstacleCollision() {
 		}
 
 		glutPostRedisplay();
-	}
-	else {
+	} else {
 		isGameOver = true;
 		gameState = 3;
 	}
@@ -57,8 +56,7 @@ void metroSignCollision() {
 		}
 
 		glutPostRedisplay();
-	}
-	else {
+	} else {
 		gameState = 2;
 	}
 }
@@ -76,8 +74,7 @@ void bottleCollision() {
 		}
 
 		glutPostRedisplay();
-	}
-	else {
+	} else {
 		score += 200;
 		bottleHorizontalPosition = 800;
 		generateNewBottleVerticalPosition();
@@ -98,8 +95,7 @@ void metroStopBarSignCollision() {
 		}
 
 		glutPostRedisplay();
-	}
-	else {
+	} else {
 		isMetroStopBarSignActive = true;
 		isMetroStopBarSignCollisionEnabled = false;
 		generateNewMetroStopBarSignVerticalPosition();
@@ -119,8 +115,7 @@ void universityCollision() {
 		}
 
 		glutPostRedisplay();
-	}
-	else {
+	} else {
 		isGameOver = true;
 		updateHighestScore();
 		gameState = 3;

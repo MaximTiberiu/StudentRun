@@ -12,9 +12,9 @@ void finishScreenDrawSelectedOption() {
 }
 
 void finishScreenSelectedOptionController() {
-	if (selectedOptionPath == 1 && (selectedOptionVerticalPosition != 160 && selectedOptionVerticalPosition != 200)) {
+	if (selectedOptionPath == 1 && (selectedOptionVerticalPosition != 200 && selectedOptionVerticalPosition != 240)) {
 		selectedOptionVerticalPosition++;
-	} else if (selectedOptionPath == -1 && (selectedOptionVerticalPosition != 160 && selectedOptionVerticalPosition != 120)) {
+	} else if (selectedOptionPath == -1 && (selectedOptionVerticalPosition != 200 && selectedOptionVerticalPosition != 160)) {
 		selectedOptionVerticalPosition--;
 	} else {
 		selectedOptionPath = 0;
@@ -32,9 +32,9 @@ void finishScreen() {
 	
 	displayHighestScore();
 
-	renderString(250, 200, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"RESTART GAME", blackColor);
-	renderString(255, 160, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"MAIN MENU", blackColor);
-	renderString(255, 120, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"QUIT GAME", blackColor);
+	renderString(250, 240, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"RESTART GAME", blackColor);
+	renderString(255, 200, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"MAIN MENU", blackColor);
+	renderString(255, 160, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"QUIT GAME", blackColor);
 	renderString(70, -90, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"Use Arrow keys to move up/down to choose an option.", blackColor);
 	renderString(100, -130, GLUT_BITMAP_TIMES_ROMAN_24, (const unsigned char*)"Press right arrow key to select the option.", blackColor);
 }

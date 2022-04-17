@@ -78,7 +78,7 @@ void startScreenSelectOption() {
 
 // finish screen
 void finishScreenMoveUp() {
-	if (selectedOptionVerticalPosition < 200) {
+	if (selectedOptionVerticalPosition < 240) {
 		selectedOptionPath = 1;
 		selectedOptionVerticalPosition++;
 	}
@@ -87,7 +87,7 @@ void finishScreenMoveUp() {
 }
 
 void finishScreenMoveDown() {
-	if (selectedOptionVerticalPosition > 120) {
+	if (selectedOptionVerticalPosition > 160) {
 		selectedOptionPath = -1;
 		selectedOptionVerticalPosition--;
 	}
@@ -96,11 +96,11 @@ void finishScreenMoveDown() {
 }
 
 void finishScreenSelectOption() {
-	if (selectedOptionVerticalPosition == 200) {
+	if (selectedOptionVerticalPosition == 240) {
 		resetGlobalVars();
 		gameState = 1;
 		startClock();
-	} else if (selectedOptionVerticalPosition == 160) {
+	} else if (selectedOptionVerticalPosition == 200) {
 		resetGlobalVars();
 		gameState = 0;
 	} else {
@@ -158,17 +158,14 @@ void pauseScreenSelectOption() {
 	if (selectedOptionVerticalPosition == 240) {
 		gameState = pausedGameState;
 		startClock();
-	}
-	else if (selectedOptionVerticalPosition == 200) {
+	} else if (selectedOptionVerticalPosition == 200) {
 		saveGame();
 		gameState = pausedGameState;
 		startClock();
-	}
-	else if (selectedOptionVerticalPosition == 160) {
+	} else if (selectedOptionVerticalPosition == 160) {
 		resetGlobalVars();
 		gameState = 0;
-	}
-	else {
+	} else {
 		exit(0);
 	}
 }
