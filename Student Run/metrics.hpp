@@ -92,3 +92,103 @@ void updateHighestScore() {
 	out << highestScore;
 	out.close();
 }
+
+void saveGame() {
+	std::ofstream out("save.txt");
+	
+	// metrics
+	out << score << "\n";
+	out << totalTime << "\n";
+
+	// game
+	out << isGameOver << "\n";
+	out << gameState << "\n";
+
+	// student
+	out << studentVerticalPosition << "\n";
+	out << studentPath << "\n";
+
+	// obstacle
+	out << obstacleHorizontalPosition << "\n";
+	out << obstacleVerticalPositon << "\n";
+
+	// metro sign
+	out << metroSignHorizontalPosition << "\n";
+	out << metroSignVerticalPositon << "\n";
+	out << isMetroSignCollisionEnabled << "\n";
+
+	// bottle
+	out << bottleHorizontalPosition << "\n";
+	out << bottleVerticalPositon << "\n";
+	out << isBottleCollisionEnabled << "\n";
+
+	// metro stop bar sign
+	out << metroStopBarSignHorizontalPosition << "\n";
+	out << metroStopBarSignVerticalPosition << "\n";
+	out << isMetroStopBarSignCollisionEnabled << "\n";
+	out << isMetroStopBarSignActive << "\n";
+
+	// screens
+	out << selectedOptionVerticalPosition << "\n";
+	out << selectedOptionPath << "\n";
+
+	// pointer
+	out << currentPointerPosition << "\n";
+
+	// university
+	out << universityHorizontalPosition << "\n";
+	out << universityVerticalPositon << "\n";
+	out << isUniversityCollisionEnabled << "\n";
+
+	out.close();
+}
+
+void loadGame() {
+	std::ifstream in("save.txt");
+
+	// metrics
+	in >> score;
+	in >> totalTime;
+
+	// game
+	in >> isGameOver;
+	in >> gameState;
+
+	// student
+	in >> studentVerticalPosition;
+	in >> studentPath;
+
+	// obstacle
+	in >> obstacleHorizontalPosition;
+	in >> obstacleVerticalPositon;
+
+	// metro sign
+	in >> metroSignHorizontalPosition;
+	in >> metroSignVerticalPositon;
+	in >> isMetroSignCollisionEnabled;
+
+	// bottle
+	in >> bottleHorizontalPosition;
+	in >> bottleVerticalPositon;
+	in >> isBottleCollisionEnabled;
+
+	// metro stop bar sign
+	in >> metroStopBarSignHorizontalPosition;
+	in >> metroStopBarSignVerticalPosition;
+	in >> isMetroStopBarSignCollisionEnabled;
+	in >> isMetroStopBarSignActive;
+
+	// screens
+	in >> selectedOptionVerticalPosition;
+	in >> selectedOptionPath;
+
+	// pointer
+	in >> currentPointerPosition;
+
+	// university
+	in >> universityHorizontalPosition;
+	in >> universityVerticalPositon;
+	in >> isUniversityCollisionEnabled;
+
+	in.close();
+}
