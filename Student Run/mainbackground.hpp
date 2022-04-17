@@ -102,8 +102,7 @@ void mainBackgroundDisplayFunction() {
 
 	if (obstacleVerticalPositon == verticalPositions[0]) {
 		drawMainBackgroundSewerCapObstacle();
-	}
-	else if (obstacleVerticalPositon == verticalPositions[1] || obstacleVerticalPositon == verticalPositions[2]) {
+	} else if (obstacleVerticalPositon == verticalPositions[1] || obstacleVerticalPositon == verticalPositions[2]) {
 		drawMainBackgroundBirdObstacle();
 	}
 
