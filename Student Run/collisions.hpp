@@ -122,6 +122,7 @@ void universityCollision() {
 	}
 	else {
 		isGameOver = true;
+		updateHighestScore();
 		gameState = 3;
 	}
 }
