@@ -26,7 +26,7 @@ void displayScore() {
 void displayTime() {
 
 	if (!isGameOver) {
-		totalTime = (int)(clock() - startTime) / CLOCKS_PER_SEC;
+		totalTime = ((int)(clock() - startTime) / CLOCKS_PER_SEC) + pausedTime;
 	}
 
 	std::string textToDisplay = "Time: ";
@@ -98,11 +98,11 @@ void saveGame() {
 	
 	// metrics
 	out << score << "\n";
-	out << totalTime << "\n";
+	out << pausedTime << "\n";
 
 	// game
 	out << isGameOver << "\n";
-	out << gameState << "\n";
+	out << pausedGameState << "\n";
 
 	// student
 	out << studentVerticalPosition << "\n";

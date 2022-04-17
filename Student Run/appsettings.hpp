@@ -10,6 +10,7 @@
 #include "metrobackground.hpp"
 #include "finishscreen.hpp"
 #include "helpscreen.hpp"
+#include "pausescreen.hpp"
 
 // headers - controllers
 #include "controllers.hpp"
@@ -59,6 +60,8 @@ void mainDisplayFunction() {
 		finishScreenDisplayFunction();
 	} else if (gameState == 4) {
 		helpScreenDisplayFunction();
+	} else if (gameState == 5) {
+		pauseScreenDisplayFunction();
 	}
 
 	glutPostRedisplay();
@@ -75,6 +78,8 @@ void mainSpecialFunction(int key, int x, int y) {
 		finishScreenKeyboardController(key, x, y);
 	} else if (gameState == 4) {
 		helpScreenKeyboardController(key, x, y);
+	} else if (gameState == 5) {
+		pauseScreenKeyboardController(key, x, y);
 	}
 }
 
